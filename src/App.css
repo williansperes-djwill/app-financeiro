@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form input,
+.form select,
+.form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+
+.resumo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+.entrada {
+  background: #28a745;
+}
+
+.saida {
+  background: #dc3545;
+}
+
+.cartao {
+  background: #007bff;
+}
+
+.saldo {
+  background: #343a40;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  background: white;
+}
+
+.item.entrada {
+  border-left: 5px solid #28a745;
+}
+
+.item.saida {
+  border-left: 5px solid #dc3545;
+}
+
+.item.cartao {
+  border-left: 5px solid #007bff;
+}
+
+.grafico {
+  margin-top: 30px;
+}
