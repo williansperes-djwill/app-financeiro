@@ -3,20 +3,36 @@ import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 export default defineConfig({
+  server: {
+    host: "0.0.0.0",
+    port: 5173
+  },
+
   plugins: [
     react(),
+
     VitePWA({
       registerType: "autoUpdate",
+
       devOptions: {
-        enabled: true,
+        enabled: true
       },
+
       manifest: {
-        name: "App Financeiro",
+        name: "Controle Financeiro JMC",
         short_name: "Financeiro",
-        start_url: ".",
+
+        description: "Aplicativo de controle financeiro pessoal",
+
+        start_url: "/",
+        scope: "/",
+
         display: "standalone",
-        background_color: "#0F172A",
-        theme_color: "#0F172A",
+        orientation: "portrait",
+
+        background_color: "#0f0f10",
+        theme_color: "#0f0f10",
+
         icons: [
           {
             src: "/icon-192.png",

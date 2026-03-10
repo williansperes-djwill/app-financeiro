@@ -131,9 +131,19 @@ export default function App() {
           <p>R$ {totais.cartao.toFixed(2)}</p>
         </div>
 
-        <div className="card saldo">
-          <h3>Saldo</h3>
-          <p>R$ {saldo.toFixed(2)}</p>
+        <div className="card">
+          <h3>Saldo Total</h3>
+          <h1>R$ {saldo.toFixed(2)}</h1>
+
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <span style={{ color: "#22C55E" }}>
+              Entradas: R$ {totais.entrada.toFixed(2)}
+            </span>
+
+            <span style={{ color: "#EF4444" }}>
+              Saídas: R$ {totais.saida.toFixed(2)}
+            </span>
+          </div>
         </div>
       </div>
 
@@ -155,9 +165,8 @@ export default function App() {
             <span>
               {item.descricao} - R$ {item.valor.toFixed(2)}
             </span>
-            <button onClick={() => excluirLancamento(item.id)}>
-              🗑
-            </button>
+
+            <button onClick={() => excluirLancamento(item.id)}>🗑</button>
           </li>
         ))}
       </ul>
